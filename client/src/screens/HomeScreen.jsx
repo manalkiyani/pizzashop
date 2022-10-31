@@ -7,6 +7,7 @@ import Pizza from "../components/Pizza";
 import Loader from "../components/Loader";
 import Error from "../components/Error";
 import Filters from "../components/Filters";
+import pizzadata from "../pizza-data"
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
@@ -27,7 +28,7 @@ const HomeScreen = () => {
         ) : (
           <Row>
             <Filters />
-            {pizzas.map((pizza) => (
+            {pizzadata.map((pizza) => (
               <Col md={4} key={pizza.name}>
                 <Pizza pizza={pizza} />
               </Col>
